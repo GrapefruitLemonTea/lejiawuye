@@ -1,0 +1,15 @@
+.house {
+text-align:center;
+width:100%;
+background:url(./img/content.jpg);
+background-size:100% 100%;
+background-repeat: repeat-y;
+padding-bottom:0;
+}
+.quality{
+text-align:center;
+width:100%;
+background-size:100% 100%;
+background-repeat: repeat-y;
+padding-bottom:0;
+}

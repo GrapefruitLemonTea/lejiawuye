@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-info">
+                        <div class="panel-heading">
+                            <h3 class="panel-title">报名人数统计</h3>
+                        </div>
+                        <div class="panel-body">
+                            <table class="table table-hover table-bordered table-striped">
+                                <thead>
+                                    <tr class="info">
+                                        <th>序号</th>
+										<th>楼宇</th>
+                                        <th>房号</th>
+                                        <th>姓名</th>
+                                        <th>电话</th>
+                                </thead>
+                                <tbody>
+								<volist name="result" id="vo">
+                                    <tr class="">
+                                        <td>{$vo.id}&nbsp;&nbsp;</td>
+										<td>{$vo.block}&nbsp;&nbsp;</td>
+                                        <td>{$vo.room}&nbsp;&nbsp;</td>
+                                        <td>{$vo.name}&nbsp;&nbsp;</td>
+                                        <td>{$vo.tel|substr=0,3}########&nbsp;&nbsp;</td>
+                                    </tr>
+									</volist>
+									    <tr class="">
+                                        <td colspan="5">报名总数：{$sum}&nbsp;&nbsp;</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="/Public/bootstrap/js/jquery.min.js"></script>
+        <script src="/Public/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>

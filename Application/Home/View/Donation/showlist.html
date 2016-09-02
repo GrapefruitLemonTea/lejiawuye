@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>小区活动捐资及开支情况</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="/Public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            body{
+                padding-top: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <volist name="result" id="vo" empty="暂时没有数据" key="k">
+                    <a href="{:U('Donation/listone',array('did'=>$vo['id']))}" class="list-group-item">
+                        <span class="badge">NEW</span>
+                        {$vo.title}
+                    </a>
+                    </volist>
+                </div>
+            </div>
+        </div>
+        <script src="/Public/bootstrap/js/jquery.min.js"></script>
+        <script src="/Public/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>
